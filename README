@@ -1,1 +1,11 @@
 just added color to openbsd's new rc.d (8) that let's you restart daemons - nothing special but whoopee.
+
+The function I added tests to see if your terminal supports color. If it does it uses "tput setval 1" to set the colored output.
+right now we just colorize the rc_exit output that says "ok". similar to linux /etc/init.d/service restart.
+
+If you want to use it, I recommend you back up /etc/rc.d/rc.subsr and copy this file in place. That's it ! Once you restart a daemon
+you should see the output similar to what you are used to in linux.
+
+Enjoy.
+
+
