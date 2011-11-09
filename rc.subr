@@ -82,11 +82,6 @@ rc_do() {
 }
 
 rc_exit() {
-#        if [$1 != "ok"]; then
-#            $COLOR=${RED}
-#        else
-#            $COLOR=${CYAN}
-#        fi
 	[ -z "${INRC}" -o X"$1" != X"ok" ] && _pfix="( ${GREEN} $1 ${NOCOLOR} )"
 	echo ${INRC:+'-n'} "${_pfix}"
 	[ X"$1" = X"ok" ] && exit 0 || exit 1
